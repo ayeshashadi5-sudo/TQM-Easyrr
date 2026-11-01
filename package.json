@@ -1,0 +1,17 @@
+{
+  "name": "qmt-tracker",
+  "version": "1.0.0",
+  "description": "متابعة البرامج والجودة (بدون اعتماديات خارجية)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js && node test-pg.js && node test-shim.js",
+    "build": "python3 tools/build-standalone.py && python3 tools/build-standalone.py --pages && node tools/build-edge.js",
+    "test:ui": "node test-ui.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
